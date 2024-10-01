@@ -6,8 +6,7 @@ namespace DataStructuresAndAlgorithmsInCSharp
     {
         static void Main(string[] args)
         {
-            DataStructureRunner.Run();
-            AlgorithmsRunner.Run();
+            Console.WriteLine("Run tests in Test Project to see algorithms and data structures working");
         }
     }
 }
