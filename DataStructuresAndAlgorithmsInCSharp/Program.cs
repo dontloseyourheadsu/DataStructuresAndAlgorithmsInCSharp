@@ -7,6 +7,7 @@ namespace DataStructuresAndAlgorithmsInCSharp
         static void Main(string[] args)
         {
             DataStructureRunner.Run();
+            AlgorithmsRunner.Run();
         }
     }
 }
