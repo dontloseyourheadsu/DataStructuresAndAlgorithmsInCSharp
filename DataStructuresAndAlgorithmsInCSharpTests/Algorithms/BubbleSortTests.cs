@@ -9,9 +9,10 @@ public class BubbleSortTests
     {
         // Arrange
         int[] array = [5, 3, 8, 4, 2];
+        var comparer = Comparer<int>.Default;
 
         // Act
-        BubbleSort.SortAscending(array);
+        BubbleSort<int>.SortAscending(array, comparer);
 
         // Assert
         Assert.Equal([2, 3, 4, 5, 8], array);
@@ -22,9 +23,10 @@ public class BubbleSortTests
     {
         // Arrange
         int[] array = [5, 3, 8, 4, 2];
+        var comparer = Comparer<int>.Default;
 
         // Act
-        BubbleSort.SortDescending(array);
+        BubbleSort<int>.SortDescending(array, comparer);
 
         // Assert
         Assert.Equal([8, 5, 4, 3, 2], array);
@@ -35,9 +37,10 @@ public class BubbleSortTests
     {
         // Arrange
         int[] array = [];
+        var comparer = Comparer<int>.Default;
 
         // Act
-        BubbleSort.SortAscending(array);
+        BubbleSort<int>.SortAscending(array, comparer);
 
         // Assert
         Assert.Equal([], array);
@@ -48,9 +51,10 @@ public class BubbleSortTests
     {
         // Arrange
         int[] array = [];
+        var comparer = Comparer<int>.Default;
 
         // Act
-        BubbleSort.SortDescending(array);
+        BubbleSort<int>.SortDescending(array, comparer);
 
         // Assert
         Assert.Equal([], array);
@@ -61,9 +65,10 @@ public class BubbleSortTests
     {
         // Arrange
         int[] array = [1];
+        var comparer = Comparer<int>.Default;
 
         // Act
-        BubbleSort.SortAscending(array);
+        BubbleSort<int>.SortAscending(array, comparer);
 
         // Assert
         Assert.Equal([1], array);
@@ -74,9 +79,10 @@ public class BubbleSortTests
     {
         // Arrange
         int[] array = [1];
+        var comparer = Comparer<int>.Default;
 
         // Act
-        BubbleSort.SortDescending(array);
+        BubbleSort<int>.SortDescending(array, comparer);
 
         // Assert
         Assert.Equal([1], array);
@@ -87,9 +93,10 @@ public class BubbleSortTests
     {
         // Arrange
         int[] array = [4, 2, 2, 8, 4];
+        var comparer = Comparer<int>.Default;
 
         // Act
-        BubbleSort.SortAscending(array);
+        BubbleSort<int>.SortAscending(array, comparer);
 
         // Assert
         Assert.Equal([2, 2, 4, 4, 8], array);
@@ -100,11 +107,13 @@ public class BubbleSortTests
     {
         // Arrange
         int[] array = [4, 2, 2, 8, 4];
+        var comparer = Comparer<int>.Default;
 
         // Act
-        BubbleSort.SortDescending(array);
+        BubbleSort<int>.SortDescending(array, comparer);
 
         // Assert
         Assert.Equal([8, 4, 4, 2, 2], array);
     }
 }
+

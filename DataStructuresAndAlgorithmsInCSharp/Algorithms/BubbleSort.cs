@@ -1,34 +1,30 @@
 ﻿namespace DataStructuresAndAlgorithmsInCSharp.Algorithms
 {
-    public class BubbleSort
+    public class BubbleSort<T>
     {
-        public static void SortAscending(int[] array)
+        public static void SortAscending(T[] array, Comparer<T> comparer)
         {
             for (int i = 0; i < array.Length; i++)
             {
                 for (int j = 0; j < array.Length - 1; j++)
                 {
-                    if (array[j] > array[j + 1])
+                    if (comparer.Compare(array[j], array[j + 1]) > 0)
                     {
-                        int temp = array[j];
-                        array[j] = array[j + 1];
-                        array[j + 1] = temp;
+                        (array[j + 1], array[j]) = (array[j], array[j + 1]);
                     }
                 }
             }
         }
 
-        public static void SortDescending(int[] array)
+        public static void SortDescending(T[] array, Comparer<T> comparer)
         {
             for (int i = 0; i < array.Length; i++)
             {
                 for (int j = 0; j < array.Length - 1; j++)
                 {
-                    if (array[j] < array[j + 1])
+                    if (comparer.Compare(array[j], array[j + 1]) < 0)
                     {
-                        int temp = array[j];
-                        array[j] = array[j + 1];
-                        array[j + 1] = temp;
+                        (array[j + 1], array[j]) = (array[j], array[j + 1]);
                     }
                 }
             }
